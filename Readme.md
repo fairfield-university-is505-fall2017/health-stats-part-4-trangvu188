@@ -5,7 +5,7 @@ This project is designed to provide Just-in-Time practice with Python, Jupyter, 
 
 __You are encouraged to collaborate with your peers.__ However, you are also responsible for learning the key lessons of each assignment. So, if you need help, ask for it and pay attention to the answers. If you know how to help someone (without doing the work for them), then please help them out.
 
-# Part 1: First Cut at Waist-to-Hip Ratio
+# Part 1: Lists & Control Flow
 ## Theory: You should know ...
 * How to find and use [Markdown syntax](https://guides.github.com/features/mastering-markdown) for headlines, lists, links, etc.
 * Rudimentary Python syntax, data types, and flow of control
@@ -39,7 +39,7 @@ __You are encouraged to collaborate with your peers.__ However, you are also res
   * When might the calculation
   ```w2h_ratio = row[1]/row[2]``` give inaccurate results?
 
-# Part 2: XXX
+# Part 2: Dictionaries
 ## Theory: You should know ...
 * How dictionaries are used for structured records
 * How file operations work in Python
@@ -54,4 +54,21 @@ __You are encouraged to collaborate with your peers.__ However, you are also res
 3. __Modify the cell so that each row is stored as a dictionary instead of a list.__ The keys should be 'ID','Waist','Hip', and 'Gender'. the rows variable should have a list of dictionaries instead of list of lists.
 4. __In the next cell, modify the code so that it uses your the new dictionaries (instead of lists).__ You will need to know how to add the two new (key,value) pairs to each dictionary.
 5. __Modify the last cell to use dictionaries instead of lists.__ You saw this coming, right?
-6. __Now for a real challenge: Use Python to write the HTML table to a file called `StatsResults.html`.__ If you did this correctly, you should be able to open the file in a web browser and see the HTML table without Jupyter. 
+6. __Now for a real challenge: Use Python to write the HTML table to a file called `StatsResults.html`.__ If you did this correctly, you should be able to open the file in a web browser and see the HTML table without Jupyter.
+
+# Part 3: NumPy Structured Arrays
+## Theory: You should know ...
+* How NumPy uses `dtype` to define structured arrays
+* How NumPy element-wise operations work
+* How NumPy input and output works
+
+## Practice: You be able to ...
+* Store and retrieve data from a NumPy structured array
+* Read and write CSV files using NumPy
+
+## Instructions
+1. __Open the `HealthStatsPart3.ipynb` file in Jupyter.__ The file already has the corrected Python code from the last class.
+2. __Scroll down to the cell that starts with `# Goal: Extract the data from the file`__ Use NumPy's `genfromtxt()` function to read the file into the rows variable. You will need to supply a `dtype` that specifies the column names and data types.
+3. __ Delete the cell that starts with `# Goal: Scrub and convert the data`.__ We don't need it anymore!  
+4. __Scroll down to the cell that starts with `# Goal: for each row ...`__ Use NumPy to calculate arrays of waist-to-hip ratios and shape codes. (Use NumPy's element-wise operations for both of these. You should no longer need a for loop.) Then add columns to your rows array with the new data. Don't forget to do update the `dtype` for the array to include the new columns.  
+5. __Use Python to write the results to disk.__ As before, write the data to an HTML table to a file called `StatsResults.html`. Then use NumPy's `savetxt()` function to write it to a CSV file called `StatsResults.csv`.
