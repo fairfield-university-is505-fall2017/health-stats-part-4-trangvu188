@@ -72,3 +72,19 @@ __You are encouraged to collaborate with your peers.__ However, you are also res
 3. __ Delete the cell that starts with `# Goal: Scrub and convert the data`.__ We don't need it anymore!  
 4. __Scroll down to the cell that starts with `# Goal: for each row ...`__ Use NumPy to calculate arrays of waist-to-hip ratios and shape codes. (Use NumPy's element-wise operations for both of these. You should no longer need a for loop.) Then add columns to your rows array with the new data. Don't forget to do update the `dtype` for the array to include the new columns.  
 5. __Use Python to write the results to disk.__ As before, write the data to an HTML table to a file called `StatsResults.html`. Then use NumPy's `savetxt()` function to write it to a CSV file called `StatsResults.csv`.
+
+# Part 4: Pandas DataFrames
+## Theory: You should know ...
+* How Pandas extends NumPy to provide better for support for structuring real world data
+* How Pandas input and output works
+
+## Practice: You be able to ...
+* Create and populate Pandas DataFrames from
+* Feed DataFrame data to NumPy
+* Read and write CSV files using NumPy
+
+## Instructions
+1. __Open the `HealthStatsPart4.ipynb` file in Jupyter.__ The file already has the corrected Python code from class.
+2. __Use Pandas's I/O functions to import the raw data from the CSV file.__ Make sure to use `dtype`s to name and type the columns while reading the file.
+3. __For the calculations step, have NumPy use the data in the DataFrame.__ We covered several ways to get a NumPy array from Pandas in class. Store the new data in two new columns, without creating a DataFrame.
+4. __Use DataFrame's I/O functions to present your results.__ Render the HTML for Jupyter and export to the CSV file `StatsResults.csv`.
